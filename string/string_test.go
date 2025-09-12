@@ -10,3 +10,8 @@ func TestReverseString(t *testing.T) {
 	reverseString(s)
 	fmt.Println(s)
 }
+
+func TestReverseStr(t *testing.T) {
+	s := reverseStr("a", 2)
+	fmt.Println(s)
+}
