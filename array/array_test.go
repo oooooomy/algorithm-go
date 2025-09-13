@@ -22,4 +22,14 @@ func TestRemoveElement(t *testing.T) {
 	if res != 5 {
 		t.Fail()
 	}
+	res = removeElementTwo([]int{3, 2, 2, 3}, 3)
+	log.Println("res: ", res)
+	if res != 2 {
+		t.Fail()
+	}
+	res = removeElementTwo([]int{0, 1, 2, 2, 3, 0, 4, 2}, 2)
+	log.Println("res: ", res)
+	if res != 5 {
+		t.Fail()
+	}
 }
