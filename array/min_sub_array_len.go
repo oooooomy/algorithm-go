@@ -1,9 +1,13 @@
 package array
 
+import (
+	"math"
+)
+
 // 209. 长度最小的子数组
 // 标准的零分
 // func minSubArrayLenError(target int, nums []int) int {
-// 	slices.Sort(nums)
+// 	slices.Sort(nums) //要求子数组，排序就不是了
 // 	if nums[0] > target {
 // 		return 0
 // 	}
@@ -19,5 +23,17 @@ package array
 // }
 
 func minSubArrayLen(target int, nums []int) int {
+	slow, sum, ans := 0, 0, math.MaxInt
+	for fast, v := range nums {
+		sum += v
+		for sum >= target {
+			ans = min(ans, fast-slow+1)
+			sum -= nums[slow]
+			slow++
+		}
+	}
+	if ans != math.MaxInt {
+		return ans
+	}
 	return 0
 }

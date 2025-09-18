@@ -55,3 +55,23 @@ func TestMinSubArrayLen(t *testing.T) {
 		t.Errorf("\nexpected: %d, output: %d\n", 3, res)
 	}
 }
+
+func TestSearch(t *testing.T) {
+	ans := 0
+	ans = search([]int{-1, 0, 3, 5, 9, 12}, 9)
+	if ans != 4 {
+		t.Errorf("\nexpected: %d, output: %d\n", 4, ans)
+	}
+	ans = search([]int{-1, 0, 3, 5, 9, 12}, 2)
+	if ans != -1 {
+		t.Errorf("\nexpected: %d, output: %d\n", -1, ans)
+	}
+	ans = search2([]int{-1, 0, 3, 5, 9, 12}, 9)
+	if ans != 4 {
+		t.Errorf("\nexpected: %d, output: %d\n", 4, ans)
+	}
+	ans = search2([]int{-1, 0, 3, 5, 9, 12}, 2)
+	if ans != -1 {
+		t.Errorf("\nexpected: %d, output: %d\n", -1, ans)
+	}
+}
