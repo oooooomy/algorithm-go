@@ -47,3 +47,9 @@ func insertionSort(arr []int) {
 // 快速排序
 // 时间复杂度：O(n log n)（平均），O(n²)（最坏）
 func quickSort(arr []int) {}
+
+// 堆排序
+// 时间复杂度：O(n log n) 无最坏情况
+func heapSort(arr []int) {
+
+}

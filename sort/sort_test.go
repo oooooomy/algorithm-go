@@ -19,3 +19,9 @@ func TestInsertionSort(t *testing.T) {
 	insertionSort(arr)
 	t.Log(arr)
 }
+
+func TestHeapSort(t *testing.T) {
+	arr := []int{3, 5, 8, 4, 6}
+	heapSort(arr)
+	t.Log(arr)
+}
